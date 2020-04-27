@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-const Learned = ({date, learn}) => (
+const Learned = ({date, learn, link}) => (
     <div className="container-fluid">
         <div className="row">
             <div className="col">
@@ -9,6 +9,7 @@ const Learned = ({date, learn}) => (
             </div>
             <div className="col">
                 {learn}
+                <a href={link}>{link}</a>
             </div>
         </div>
     </div>
