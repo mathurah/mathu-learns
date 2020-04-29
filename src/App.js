@@ -17,7 +17,7 @@ class App extends Component {
   }
 
   initData() {
-    fetch(`https://api.airtable.com/v0/appk0O7TZ7UxoYsSG/Table%201?api_key=${process.env.REACT_APP_AIR_TABLE_API_KEY}`)
+    fetch('https://api.airtable.com/v0/appk0O7TZ7UxoYsSG/Table%201?api_key=keyM53ymgfikEXuqb')
       .then(resp => resp.json())
       .then(data => {
         const formattedData = data.records.map((o, index) => ({
