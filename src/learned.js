@@ -7,10 +7,7 @@ const Learned = ({date, learn, link}) => (
             <div className="col">
                 {date}
             </div>
-            <div className="col">
-                {learn}
-                <a href={link}>{link}</a>
-            </div>
+            <div className="col"dangerouslySetInnerHTML={{__html: (learn)}}></div>
         </div>
     </div>
   );
