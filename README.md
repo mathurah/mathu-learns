@@ -7,5 +7,5 @@ View the site [here](https://mathu-learns.netlify.app).
 ## How it was made 🛠
 - Using the Airtable API + [Create React App](https://github.com/facebook/create-react-app), along with lodash to sort and show everything in order
 
-##Timeline ⏰
+## Timeline ⏰
 April 26 - April 29
