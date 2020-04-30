@@ -41,7 +41,7 @@ class App extends Component {
         <div className="container mt-5">
           <div className="row text-center">
             <div className="col">
-              <img src={require("./mathu-learns.png")} />
+              <img className="logo" src={require("./mathu-learns.svg")} />
             </div>
           </div>
           <div className="row">
