@@ -1,13 +1,15 @@
 import React from 'react'
+import "./App.css";
+
 
 
 const Learned = ({date, learn, link}) => (
     <div className="container-fluid">
         <div className="row">
-            <div className="col">
-                {date}
+            <div className="col-3">
+                <h3>{date}</h3>
             </div>
-            <div className="col"dangerouslySetInnerHTML={{__html: (learn)}}></div>
+            <div className="col-9"dangerouslySetInnerHTML={{__html: (learn)}}></div>
         </div>
     </div>
   );

@@ -1,42 +1,69 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap');
 .App {
   text-align: center;
+  font-size: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.info {
+  padding: 20px !important;
+  margin: 10px !important;
+  background: #F4EEFF;
+  border-radius: 10px;
+  color: #333333; 
+  font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif !important;   
+  /* font-family: 'Open Sans'; */
+    margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 20px;
+  line-height: 150%;
+  color: #14132c; 
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }
 
-.App-link {
-  color: #61dafb;
+.row {
+  padding: 10px; 
+}
+
+h2 {
+  display: block; 
+  font-size: 1.5em !important;
+  font-family: 'Lora', serif;
+  color: #590078;
+}
+
+h3 {
+  display: block; 
+  font-size: 1.75em !important;
+  font-family: 'Lora', serif;
+  color: #9861AB;
 }
 
 a {
-  color: purple;
+  color: black !important;
+  transition: all linear .2s !important;
+  background: #F2D9FA !important;
+  /* background: rgba(245, 215, 110, .5) !important; */
+  text-decoration: none !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a:hover {
+  /* background: #F5D76E !important; */
+    background: #E9BFF7 !important;
+  text-decoration: none;
+
+}
+
+.center {
+  align-content: center;
+  text-align: center;
 }
