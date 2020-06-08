@@ -40,11 +40,6 @@ class App extends Component {
       <div className="header">
         <div className="container mt-5">
           <div className="row text-center">
-            <span class="heart-falling">&#10084;</span>
-            <span class="heart-falling">&#10084;</span>
-            <span class="heart-falling">&#10084;</span>
-            <span class="heart-falling">&#10084;</span>
-            <span class="heart-falling">&#10084;</span>
                 <div className="col">
               <img className="logo" src={require("./mathu-learns.svg")} />
             </div>
