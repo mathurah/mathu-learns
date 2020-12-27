@@ -1,43 +1,34 @@
-import React, { Component } from "react";
+import React, {useState, useEffect } from "react";
 import "./App.css";
 import orderBy from "lodash/orderBy";
 import Learned from "./learned";
+import dotenv from 'dotenv';
+dotenv.config({path: '.env'});
 
-class App extends Component {
-  constructor(props) {
-    super(props);
+const API_KEY = process.env.REACT_APP_AIR_TABLE_API_KEY;
 
-    this.state = {
-      learning: []
-    };
+export default function App(){
+  const [learning, setLearning] = useState([]);
+  useEffect(() => {
+    initData();
+  }, [])
+
+  const initData = async () => {
+    const response = await fetch(`https://api.airtable.com/v0/appk0O7TZ7UxoYsSG/Table%201?api_key=${API_KEY}`);
+    const data = await response.json(); 
+
+    const formattedData = data.records?.map((o, index) => ({
+      ...o.fields,
+      index,
+      id: o.id,
+      key: o.id
+    }));
+    setLearning(orderBy(formattedData, ["date"], ["desc"])); 
+    console.log(learning)
   }
 
-  componentDidMount() {
-    this.initData();
-  }
-
-  initData() {
-    fetch(
-      "https://api.airtable.com/v0/appk0O7TZ7UxoYsSG/Table%201?api_key=keyM53ymgfikEXuqb"
-    )
-      .then(resp => resp.json())
-      .then(data => {
-        const formattedData = data.records.map((o, index) => ({
-          ...o.fields,
-          index,
-          id: o.id,
-          key: o.id
-        }));
-
-        this.setState({
-          learning: orderBy(formattedData, ["date"], ["desc"])
-        });
-      });
-  }
-
-  render() {
-    return (
-      <div className="header">
+  return (
+    <div className="header">
         <div className="container mt-5">
           <div className="row text-center">
                 <div className="col">
@@ -55,8 +46,8 @@ class App extends Component {
             </div>
           </div>
           <div>
-            {this.state.learning.map(learnings => (
-              <Learned {...learnings} />
+            {learning.map(learn => (
+              <Learned {...learn} />
             ))}
           </div>
           <div className="row center">
@@ -66,8 +57,8 @@ class App extends Component {
           </div>
         </div>
       </div>
-    );
-  }
+  );
 }
 
-export default App;
+
+

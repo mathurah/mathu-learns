@@ -25,11 +25,6 @@ body {
   color: #14132c; 
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
 .row {
   padding: 10px; 
 }

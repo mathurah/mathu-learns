@@ -1,9 +1,7 @@
 import React from 'react'
 import "./App.css";
 
-
-
-const Learned = ({date, learn, link}) => (
+const Learned = ({date, learn}) => (
     <div className="container-fluid">
         <div className="row">
             <div className="col-3">
