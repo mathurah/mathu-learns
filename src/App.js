@@ -11,7 +11,7 @@ export default function App(){
   const [learning, setLearning] = useState([]);
   useEffect(() => {
     initData();
-  }, [initData])
+  }, [])
 
   const initData = async () => {
     const response = await fetch(`https://api.airtable.com/v0/appk0O7TZ7UxoYsSG/Table%201?api_key=${API_KEY}`);
